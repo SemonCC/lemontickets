@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="ribbon1" onclick="ribbon1()">to ribbon1</button>
+    <button id="ribbon2" onclick="ribbon2()">to ribbon2</button>
+    <script src="js/jquery-3.3.1.js"></script>
+<script>
+    function ribbon1() {
+        $.ajax({
+            url:"app-a/ribbon1/jack",
+            type:"get",
+            success:function (data) {
+                alert(data);
+            }
+        });
+    }
+    function ribbon2() {
+        $.ajax({
+            url:"app-b/ribbon1/jack",
+            type:"get",
+            success:function (data) {
+                alert(data);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
